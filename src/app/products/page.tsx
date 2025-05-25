@@ -1,3 +1,4 @@
+"use client";
 import { Header } from "@/components/Header/Header";
 import { useFetchProducts } from "@/hooks/useFetchProducts";
 import { ProductCard } from "./_components/ProductCard/ProductCard";
@@ -5,6 +6,8 @@ import { SkeletonProduct } from "./_components/SkeletonProduct/SkeletonProduct";
 
 export default function Products() {
 	const { products, isLoading, error } = useFetchProducts();
+	console.log(products && products);
+	console.log(isLoading);
 	console.log(error && error);
 
 	return (
@@ -54,7 +57,7 @@ export default function Products() {
 									key={product.id}
 									product_id={product.id}
 									title={product.title}
-									image={product.images[0]}
+									image={product.image}
 								/>
 							))
 						)}

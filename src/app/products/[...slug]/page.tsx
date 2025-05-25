@@ -27,13 +27,14 @@ export default function Page() {
 					</section>
 				) : (
 					<section className='flex w-[80%] mx-auto p-6 gap-5 justify-between h-full items-center'>
-						<div className='w-[600px] h-auto'>
+						<div className='relative w-[600px] h-[600px] rounded-3xl overflow-hidden'>
 							<Image
-								src={product && product.images[0]}
-								alt='hola'
-								width='600'
-								height='100'
-								className='max-w-full object-cover rounded-3xl'
+								src={product && product.image}
+								alt={product?.title || "product image"}
+								fill
+								style={{ objectFit: "contain" }}
+								sizes='(max-width: 768px) 100vw, 600px'
+								priority
 							/>
 						</div>
 
@@ -43,9 +44,7 @@ export default function Page() {
 									<h3 className='text-2xl font-bold'>
 										{product && product.title}
 									</h3>
-									<p className='font-light'>
-										{product && product.cetegory && product.category.name}
-									</p>
+									<p className='font-light'>{product && product.category}</p>
 								</div>
 								<div className=''>
 									<span className='font-bold text-2xl'>
@@ -54,11 +53,11 @@ export default function Page() {
 								</div>
 							</div>
 
-							<div className='flex flex-col gap-3'>
+							{/* 				<div className='flex flex-col gap-3'>
 								<div className='flex justify-between'>
 									<p className='text-gray-300'>Size</p>
 									<p className='text-gray-300 flex gap-2 items-center'>
-										<span>{/* <RiRulerLine /> */}</span>
+										<span><RiRulerLine /></span>
 										Size guide
 									</p>
 								</div>
@@ -85,7 +84,7 @@ export default function Page() {
 										3XL
 									</button>
 								</div>
-							</div>
+							</div> */}
 
 							<button className='py-2 px-5 w-full rounded-md bg-sky-600 text-white'>
 								Add to card
