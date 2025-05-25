@@ -4,13 +4,8 @@ export interface IProduct {
 	slug?: string;
 	price?: number;
 	description?: string;
-	category?: {
-		id?: number;
-		name?: string;
-		image?: string;
-		slug?: string;
-	};
-	images: string[];
+	category?: string;
+	image?: string;
 }
 
 export interface IProductCard {
