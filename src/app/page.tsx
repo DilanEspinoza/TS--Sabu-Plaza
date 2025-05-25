@@ -1,5 +1,4 @@
 // import { Footer } from "@/components/Footer/Footer";
-
 import { Header } from "@/components/Header/Header";
 import Link from "next/link";
 
@@ -14,7 +13,7 @@ export default function Home() {
 						<h1 className='text-7xl font-semibold  '>
 							Start shopping online with
 							<mark className='bg-none relative text-inherit inline-block bg-inherit px-2  '>
-								<span className='relative z-10 font-bold'>Pepelian</span>
+								<span className='relative z-10 font-bold'>Sabu Plaza</span>
 								<span className='bg-red-400 h-2 w-full -bottom-2.5 left-7 inline-block absolute z-0 text-red-400  transition-custom py-3'></span>
 							</mark>
 						</h1>
