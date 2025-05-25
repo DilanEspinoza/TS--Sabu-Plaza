@@ -12,9 +12,10 @@ export function useFetchProduct(id: number) {
 		const getProduct = async () => {
 			try {
 				const res = await fetch(
-					`https://api.escuelajs.co/api/v1/products/${id}`
+					`${process.env.NEXT_PUBLIC_API_URL}/products/${id}`
 				);
 				const data = await res.json();
+				console.log(data);
 				setProduct(data);
 				setIsLoading(false);
 			} catch (error) {
