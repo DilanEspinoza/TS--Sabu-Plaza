@@ -8,18 +8,18 @@ export const Header = () => {
 			{/* logo */}
 			<div>
 				<Link href='/' className='text-4xl'>
-					Pixly
+					Sabu Plaza
 				</Link>
 			</div>
 
 			<div className='flex-1  '>
 				<form
 					action=''
-					className='w-full flex gap-3 py-2 px-4 rounded-2xl bg-neutral-800 border border-neutral-600 outline-none '>
+					className='w-full flex gap-3 py-2 px-4 rounded-2xl bg-neutral-200 border border-neutral-50 outline-none '>
 					<input
 						type='text'
 						placeholder='Search for anything'
-						className='w-full outline-none bg-neutral-800'
+						className='w-full outline-none bg-neutral-200'
 					/>
 					<div className='border-r border-neutral-600'></div>
 					<div>
@@ -39,7 +39,7 @@ export const Header = () => {
 								<button>
 									<CartIcon />
 								</button>
-								<div className='z-50 absolute  right-0  p-4 bg-white text-black  rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 w-[500px] h-[500px]'>
+								<div className='z-50 absolute  right-0  p-4 bg-neutral-900 text-white  rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 w-[500px] h-[500px]'>
 									<div className='flex flex-col justify-between h-full '>
 										<div className='flex flex-col gap-2'>
 											<h1 className='text-2xl'>Shopping Cart</h1>
@@ -56,10 +56,10 @@ export const Header = () => {
 					</li>
 					<li>
 						<div className='flex gap-3'>
-							<button className='py-2 px-4 hover:bg-neutral-700 rounded-3xl'>
+							<button className='py-2 px-4 hover:bg-neutral-200 rounded-3xl'>
 								Sing in
 							</button>
-							<button className='py-2 px-4 bg-neutral-700 rounded-3xl hover:bg-neutral-600 border border-neutral-300 font-bold hover:text-neutral-50'>
+							<button className='py-2 px-4 bg-neutral-200 rounded-3xl hover:bg-neutral-300 border border-neutral-800 font-semibold  '>
 								Register
 							</button>
 						</div>
